@@ -15,24 +15,33 @@ function handleKeyboardKeyUp(event){
     const playerPressed = event.key;
     console.log('player pressed',playerPressed);
 
+    //get the expected to press
+
     const currentAlphabetElement = document.getElementById('current-alphabet');
     const currentAlphabet = currentAlphabetElement.innerText;
     const expectedAlphabet = currentAlphabet.toLowerCase();
     console.log(playerPressed,expectedAlphabet);
+
+    //check matched or not
+    if(playerPressed === expectedAlphabet){
+        console.log('you get a point');
+    }
+
+    else{
+        console.log('you lose a live');
+    }
     
 }
-document.addEventListener('keyup', handleKeyboardKeyUp)
+document.addEventListener('keyup', handleKeyboardKeyUp);
 function continueGame (){
+
     // step 1: generate a random alphabet
     const alphabet = getARandomAlphabet();
     console.log('your alphabet', alphabet);
 
-
     //set randomly generated alphabet to the screen (show it)
-
-  
-    // currentAlphabetElement.innerText = alphabet;
-
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    currentAlphabetElement.innerText = alphabet;
 
     //set background color 
     setBackgroundColorById(alphabet);
