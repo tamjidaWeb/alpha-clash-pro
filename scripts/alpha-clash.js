@@ -11,6 +11,17 @@
     
 // }
 
+function handleKeyboardKeyUp(event){
+    const playerPressed = event.key;
+    console.log('player pressed',playerPressed);
+
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    const currentAlphabet = currentAlphabetElement.innerText;
+    const expectedAlphabet = currentAlphabet.toLowerCase();
+    console.log(playerPressed,expectedAlphabet);
+    
+}
+document.addEventListener('keyup', handleKeyboardKeyUp)
 function continueGame (){
     // step 1: generate a random alphabet
     const alphabet = getARandomAlphabet();
@@ -19,8 +30,12 @@ function continueGame (){
 
     //set randomly generated alphabet to the screen (show it)
 
-    const currentAlphabetElement = document.getElementById('current-alphabet');
-    currentAlphabetElement.innerText = alphabet;
+  
+    // currentAlphabetElement.innerText = alphabet;
+
+
+    //set background color 
+    setBackgroundColorById(alphabet);
 }
 
 function play(){
