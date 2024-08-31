@@ -117,5 +117,6 @@ function gameOver(){
     //step 1: get the final score
     const lastScore = getTextElementvalueById('current-score');
     console.log('last score',lastScore);
+    setTextElementValueById('last-score',lastScore);
 }
 
