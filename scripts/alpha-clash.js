@@ -112,6 +112,10 @@ function play(){
 
 function gameOver(){
     hideElementById('play-ground');
-    showElementById('final-score'); final-score
+    showElementById('final-score'); 
+    //update final score
+    //step 1: get the final score
+    const lastScore = getTextElementvalueById('current-score');
+    console.log('last score',lastScore);
 }
 
