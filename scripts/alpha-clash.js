@@ -12,24 +12,26 @@
 // }
 
 function handleKeyboardKeyUp(event){
+
     const playerPressed = event.key;
-    console.log('player pressed',playerPressed);
 
-    //get the expected to press
 
+    // key player expressed to press
     const currentAlphabetElement = document.getElementById('current-alphabet');
     const currentAlphabet = currentAlphabetElement.innerText;
     const expectedAlphabet = currentAlphabet.toLowerCase();
-    console.log(playerPressed,expectedAlphabet);
 
-    //check matched or not
+
+    // check right or wrong key pressed
+
     if(playerPressed === expectedAlphabet){
-        console.log('you get a point');
+        console.log('you got a point!')
     }
-
     else{
-        console.log('you lose a live');
+        console.log('dhur vai/ apu right key press korun');
     }
+   
+
     
 }
 document.addEventListener('keyup', handleKeyboardKeyUp);
