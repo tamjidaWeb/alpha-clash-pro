@@ -118,5 +118,14 @@ function gameOver(){
     const lastScore = getTextElementvalueById('current-score');
     console.log('last score',lastScore);
     setTextElementValueById('last-score',lastScore);
+
+
+
+    //clear the last selected alphabet highlight
+    const currentAlphabet = getElementTextById('current-alphabet');
+    // console.log(currentAlphabet);
+    removeBackgroundColorById(currentAlphabet);
+
+
 }
 
