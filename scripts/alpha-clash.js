@@ -14,6 +14,12 @@
 function handleKeyboardKeyUp(event){
 
     const playerPressed = event.key;
+    console.log('player pressed', playerPressed);
+
+    //stop the game if pressed 'Esc'
+    if(playerPressed === 'Escape'){
+        gameOver();
+    }
 
 
     // key player expressed to press
